@@ -1,7 +1,0 @@
-DISCORD_BOT_TOKEN=MTQ5NTEyOTQ3NzY0NTA3NDcyMg.GA_PgG.TIvJKU1v-R9V1zTHjU5LTm44mmABZ7kgZD-Q8I
-# Либо канал (надёжнее):
-# DISCORD_ORDER_CHANNEL_ID=1481547211308273805
-# Либо личные сообщения на ваш user id (бот должен иметь право писать):
-DISCORD_OWNER_USER_ID=660410238582784010
-
-PORT=8787
