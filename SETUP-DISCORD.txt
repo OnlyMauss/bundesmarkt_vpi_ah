@@ -1,0 +1,30 @@
+VPI Рынок — бот Discord (1992)
+
+1) Создайте приложение: https://discord.com/developers/applications
+   - Bot → Reset Token → скопируйте в .env как DISCORD_BOT_TOKEN
+
+2) Интенты: «SERVER MEMBERS INTENT» не нужен.
+   Для ЛС: вы и бот должны быть на одном сервере.
+
+3) Пригласите бота (OAuth2 → URL Generator):
+   - Scopes: bot
+   - Bot Permissions: Send Messages, Attach Files, Read Message History
+   - Канал: выберите закрытый канал для заказов, ПКМ → копировать ID канала
+     → DISCORD_ORDER_CHANNEL_ID в .env
+
+4) Скопируйте .env.example в .env и заполните значения.
+
+5) Разработка:
+   npm install
+   npm run dev
+   → Vite: http://127.0.0.1:5173
+   → API и бот: http://127.0.0.1:8787
+
+6) Продакшен (один порт):
+   npm run build
+   PowerShell:
+   $env:NODE_ENV="production"; npx tsx server/index.ts
+   Затем откройте http://127.0.0.1:8787
+
+Каждый заказ создаётся как .txt и отправляется с кратким текстом в выбранный
+канал (или в личку).
