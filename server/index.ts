@@ -85,8 +85,8 @@ if (isProd) {
     res.sendFile(path.join(__dirname, "../dist/client/index.html"));
   });
 }
-
+console.log("DISCORD_BOT_TOKEN = " + process.env.DISCORD_BOT_TOKEN);
 app.listen(PORT, () => {
   console.log(`API и магазин: http://127.0.0.1:${PORT}`);
 });
-console.log("DISCORD_BOT_TOKEN = " + process.env.DISCORD_BOT_TOKEN);
+
